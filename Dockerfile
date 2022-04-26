@@ -9,8 +9,7 @@ RUN apt-get update && \
 ADD . /mayhem-cmake-example
 WORKDIR /mayhem-cmake-example
 
-RUN mkdir build && \
-    cd build/ && \
+RUN cd build/ && \
     CC=clang CXX=clang++ cmake .. && \
     make
 
