@@ -9,9 +9,9 @@ RUN apt-get update && \
 ADD . /mayhem-cmake-example
 WORKDIR /mayhem-cmake-example
 
-RUN cd build/ && \
-    CC=clang CXX=clang++ cmake .. && \
-    make
+RUN cd build/
+RUN CC=clang CXX=clang++ cmake ..
+RUN make
 
 # Package Stage
 FROM ubuntu:20.04
